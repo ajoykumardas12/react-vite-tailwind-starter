@@ -7,7 +7,13 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended",
   ],
-  ignorePatterns: ["dist", ".eslintrc.cjs"],
+  ignorePatterns: [
+    "dist",
+    "node_modules/*",
+    ".eslintrc.cjs",
+    ".prettierrc.js",
+    "tailwind.config.js",
+  ],
   parser: "@typescript-eslint/parser",
   plugins: ["react-refresh"],
   rules: {
@@ -21,12 +27,6 @@ module.exports = {
         vars: "all",
         args: "after-used",
         ignoreRestSiblings: false,
-      },
-    ],
-    "prettier/prettier": [
-      "error",
-      {
-        trailingComma: "none",
       },
     ],
   },
